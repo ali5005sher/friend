@@ -1,8 +1,19 @@
 import { useSelector } from "react-redux";
 import Barcode from "../components/Barcode";
 import Button from "../components/Button";
+import PopUpTwo from "./PopUpTwo";
+import { useState } from "react";
 
 const FrameFour = () => {
+  const [isOpenPopUp, setIsOpenPopUp] = useState(false);
+
+  const openPopUp = () => {
+    setIsOpenPopUp(true);
+  };
+  const closePopUp = () => {
+    setIsOpenPopUp(false);
+  };
+
   const questions = useSelector((state) => state.questions);
   let q = questions.filter((question) => typeof question === "string");
 
@@ -18,8 +29,10 @@ const FrameFour = () => {
           );
         })}
       </div>
-      <Button text="generate a link" />
+      <Button text="generate a link" onClick={openPopUp} />
       <Barcode />
+
+      {isOpenPopUp && <PopUpTwo closePopUp={closePopUp} />}
     </div>
   );
 };

@@ -1,8 +1,14 @@
 const Alert = ({ text, setAlert, bgColor, setSuccessAlert, setAlertTwo }) => {
   setTimeout(() => {
-    setAlert(false);
-    setSuccessAlert(false);
-    setAlertTwo(false);
+    if (setAlert) {
+      setAlert(false);
+    }
+    if (setSuccessAlert) {
+      setSuccessAlert(false);
+    }
+    if (setAlertTwo) {
+      setAlertTwo(false);
+    }
   }, 1000);
   return (
     <div className="alert" style={{ backgroundColor: bgColor }}>
