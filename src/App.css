@@ -1,0 +1,300 @@
+.main_container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: rgb(0, 0, 0); */
+  background-image: url(./assets/bg.jpg);
+  background-size: cover;
+  position: relative;
+}
+@keyframes fallFromTop {
+  0% {
+    top: -200px; /* Initial position, above the viewport */
+  }
+
+  50% {
+    top: 10px;
+  }
+
+  80% {
+    top: -10px;
+  }
+  100% {
+    top: 10px;
+  }
+}
+
+.alert {
+  width: 200px;
+  height: 100px;
+  border: 2px solid black;
+  position: absolute;
+  top: 10px; /* Initial position, can be adjusted based on your layout */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  animation: fallFromTop 0.5s ease; /* Adjust duration and timing function as needed */
+}
+
+/* _______________________FRAMEONE_______________________ */
+
+.frame_one_container {
+  background-color: rgb(233, 233, 233);
+  position: absolute;
+  border: 3px solid black;
+  width: 400px;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  margin: 30px;
+}
+
+.frame_one_heading {
+  text-align: center;
+  /* margin: 30px 0px; */
+  color: rgb(29, 29, 29);
+}
+.frame_one_input {
+  width: 250px;
+  height: 40px;
+  border: 3px solid black;
+  padding: 8px;
+  outline: none;
+  /* text-transform: uppercase; */
+  margin: 10px 0px;
+  box-shadow: 8px 8px 4px 0px black;
+}
+.frame_one_input::placeholder {
+  text-transform: uppercase;
+}
+.frame_one_input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.frame_one_button {
+  width: 250px;
+  height: 40px;
+  border: 3px solid black;
+  padding: 8px;
+  outline: none;
+  text-transform: uppercase;
+  margin: 10px 0px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 8px 8px 4px 0px black;
+}
+.frame_one_button:hover {
+  background-color: rgba(83, 83, 83, 0.24);
+}
+
+.barcode_image {
+  width: 200px;
+}
+.frame_one_content {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.img_para {
+  text-align: center;
+  font-size: 10px;
+  opacity: 0.7;
+  letter-spacing: 2px;
+}
+
+/* _______________________FRAMETWO_______________________ */
+
+.frame_two_container {
+  background-color: rgb(233, 233, 233);
+  position: absolute;
+  border: 3px solid black;
+  width: 400px;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  margin: 30px;
+}
+
+.frame_two_heading {
+  text-align: center;
+  color: rgb(29, 29, 29);
+
+  /* margin: 30px 0px; */
+}
+.plain_button {
+  width: 250px;
+  height: 40px;
+  border: 3px solid black;
+  padding: 8px;
+  outline: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  text-align: center;
+  display: inline-block;
+  margin: 6px 0px;
+}
+.frame_two_content {
+  text-align: center;
+}
+
+.check_box_container {
+  display: flex;
+  padding: 8px;
+  /* border: 1px solid red; */
+  /* margin: 8px; */
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+.checkbox {
+  margin: 4px 8px;
+  height: 19px;
+  width: 19px;
+}
+.checkbox_component_contianer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* _____________________________FRAME THREE_______________________________ */
+
+.frame_three_container {
+  background-color: rgb(233, 233, 233);
+  position: absolute;
+  border: 3px solid black;
+  width: 400px;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  margin: 30px;
+  position: relative;
+}
+
+.frame_three_heading {
+  text-align: center;
+  color: rgb(29, 29, 29);
+}
+
+.frame_three_heading p {
+  font-size: 12px;
+}
+.frame_three_questions {
+  /* border: 1px solid red; */
+  width: 300px;
+  height: 180px;
+  overflow-y: auto;
+  padding: 5px;
+  box-shadow: 1px 1px 5px rgb(63, 63, 63);
+  /* background-color: white; */
+  background-color: rgb(233, 233, 233);
+}
+.frame_three_questions::-webkit-scrollbar {
+  width: 9px; /* Width of the scrollbar */
+  width: 3px;
+}
+
+.frame_three_questions::-webkit-scrollbar-track {
+  background: rgb(177, 177, 177);
+  /* border-radius: 6px; */
+}
+
+.frame_three_questions::-webkit-scrollbar-thumb {
+  background-color: #353535;
+  /* border-radius: 6px; */
+}
+
+.frame_three_questions::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.frame_three_questions h3 {
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-weight: 200;
+}
+/* _______________pop up one container_____________________ */
+
+.popup_one_container {
+  background-color: rgb(233, 233, 233);
+  position: absolute;
+  border: 3px solid black;
+  width: 400px;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  margin: 30px;
+  position: absolute;
+}
+.popup_one_container h1 {
+  color: rgb(29, 29, 29);
+}
+
+.add {
+  font-weight: 500;
+  font-size: 40px;
+  padding: 8px;
+  cursor: pointer;
+}
+.popup_one_content {
+  display: flex;
+}
+
+/* ____________FRAME FOUR CONTAINER________________ */
+.frame_four_container {
+  background-color: rgb(233, 233, 233);
+  position: absolute;
+  border: 3px solid black;
+  width: 400px;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  margin: 30px;
+}
+
+.collected_questions_container {
+  width: 300px;
+  height: 200px;
+  overflow-y: auto;
+  padding: 5px;
+  box-shadow: 1px 1px 5px rgb(63, 63, 63);
+  background-color: rgb(233, 233, 233);
+  color: black;
+}
+
+.collected_questions_container h3 {
+  /* text-decoration: underline; */
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-weight: 200;
+}
+.collected_questions_container::-webkit-scrollbar {
+  width: 3px; /* Width of the scrollbar */
+}
+
+.collected_questions_container::-webkit-scrollbar-track {
+  background: rgb(177, 177, 177);
+  /* border-radius: 6px; */
+}
+
+.collected_questions_container::-webkit-scrollbar-thumb {
+  background-color: #353535;
+  /* border-radius: 6px; */
+}
+
+.collected_questions_container::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}

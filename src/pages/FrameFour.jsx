@@ -1,0 +1,27 @@
+import { useSelector } from "react-redux";
+import Barcode from "../components/Barcode";
+import Button from "../components/Button";
+
+const FrameFour = () => {
+  const questions = useSelector((state) => state.questions);
+  let q = questions.filter((question) => typeof question === "string");
+
+  return (
+    <div className="frame_four_container">
+      <h2>YOUR QUESTIONS</h2>
+      <div className="collected_questions_container">
+        {q.map((question, index) => {
+          return (
+            <h3 key={index}>
+              {index + 1}) {question}
+            </h3>
+          );
+        })}
+      </div>
+      <Button text="generate a link" />
+      <Barcode />
+    </div>
+  );
+};
+
+export default FrameFour;
