@@ -11,7 +11,10 @@ const Alert = ({ text, setAlert, bgColor, setSuccessAlert, setAlertTwo }) => {
     }
   }, 1000);
   return (
-    <div className="alert" style={{ backgroundColor: bgColor }}>
+    <div
+      className="alert"
+      style={{ backgroundColor: bgColor, textAlign: "center" }}
+    >
       {text}
     </div>
   );
